@@ -4,16 +4,16 @@ package com.sqisland.android.hello;
  * Created by abdul on 4/26/2018.
  */
 
-public class User {
+public class Task {
 
     String name;
 
 
-    public User(String name) {
+    public Task(String name) {
         this.name = name;
     }
 
-    public User() {
+    public Task() {
     }
 
     public String getName() {

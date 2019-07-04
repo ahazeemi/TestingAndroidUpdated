@@ -16,10 +16,10 @@ import java.util.ArrayList;
 
 public class AllUsersCallRecyclerViewAdapter extends RecyclerView.Adapter<AllUsersCallRecyclerViewAdapter.ViewHolder> {
 
-    private final ArrayList<User> mValues;
+    private final ArrayList<Task> mValues;
     Context c;
 
-    public AllUsersCallRecyclerViewAdapter(ArrayList<User> items, Context context) {
+    public AllUsersCallRecyclerViewAdapter(ArrayList<Task> items, Context context) {
         mValues = items;
         c = context;
     }
@@ -27,7 +27,7 @@ public class AllUsersCallRecyclerViewAdapter extends RecyclerView.Adapter<AllUse
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_user_simple, parent, false);
+                .inflate(R.layout.task_user_simple, parent, false);
         return new ViewHolder(view);
     }
 
@@ -60,14 +60,14 @@ public class AllUsersCallRecyclerViewAdapter extends RecyclerView.Adapter<AllUse
         public final View mView;
         public final ImageView mPicture;
         public final TextView mName;
-        public User mItem;
+        public Task mItem;
 
 
         public ViewHolder(View view) {
             super(view);
             mView = view;
-            mPicture = view.findViewById(R.id.user_dp);
-            mName = view.findViewById(R.id.user_name);
+            mPicture = view.findViewById(R.id.task_picture);
+            mName = view.findViewById(R.id.task_name);
         }
 
         @Override
