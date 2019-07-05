@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "898257170195",
+    "firebase_url": "https://testing-android-bf55d.firebaseio.com",
+    "project_id": "testing-android-bf55d",
+    "storage_bucket": "testing-android-bf55d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:898257170195:android:dadab86cefd860f7",
+        "android_client_info": {
+          "package_name": "com.sqisland.android.hello"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "898257170195-bqar356pjinod0tfr756a4be9ul7pp2t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiB0APEWhC2gWXRdKWOsPhu2K2YRKKsfE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "898257170195-bqar356pjinod0tfr756a4be9ul7pp2t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

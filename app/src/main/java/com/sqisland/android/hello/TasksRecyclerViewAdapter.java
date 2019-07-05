@@ -2,26 +2,30 @@ package com.sqisland.android.hello;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
 
-public class AllUsersCallRecyclerViewAdapter extends RecyclerView.Adapter<AllUsersCallRecyclerViewAdapter.ViewHolder> {
+public class TasksRecyclerViewAdapter extends RecyclerView.Adapter<TasksRecyclerViewAdapter.ViewHolder>  {
 
     private final ArrayList<Task> mValues;
-    Context c;
 
-    public AllUsersCallRecyclerViewAdapter(ArrayList<Task> items, Context context) {
+    Context c;
+    RecyclerViewClickListener listener;
+
+    public TasksRecyclerViewAdapter(ArrayList<Task> items, RecyclerViewClickListener listener, Context context) {
         mValues = items;
         c = context;
+        this.listener = listener;
     }
 
     @Override
@@ -40,7 +44,17 @@ public class AllUsersCallRecyclerViewAdapter extends RecyclerView.Adapter<AllUse
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(c, "Clicked ".concat(mValues.get(position).getName()), Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(c, TaskDetailActivity.class);
+                intent.putExtra("taskName", mValues.get(position).getName());
+                intent.putExtra("taskTimestamp", mValues.get(position).getTimestamp());
+                c.startActivity(intent);
+            }
+        });
+        holder.mButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onClick(v,position);
             }
         });
 
@@ -60,6 +74,7 @@ public class AllUsersCallRecyclerViewAdapter extends RecyclerView.Adapter<AllUse
         public final View mView;
         public final ImageView mPicture;
         public final TextView mName;
+        public final ImageButton mButton;
         public Task mItem;
 
 
@@ -68,6 +83,7 @@ public class AllUsersCallRecyclerViewAdapter extends RecyclerView.Adapter<AllUse
             mView = view;
             mPicture = view.findViewById(R.id.task_picture);
             mName = view.findViewById(R.id.task_name);
+            mButton = view.findViewById(R.id.remove_button);
         }
 
         @Override
@@ -77,4 +93,5 @@ public class AllUsersCallRecyclerViewAdapter extends RecyclerView.Adapter<AllUse
 
 
     }
+
 }

@@ -14,8 +14,8 @@
 
     <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/task_picture"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:paddingTop="5dp"
@@ -30,13 +30,13 @@
     <TextView
         android:id="@+id/task_name"
         android:layout_width="181dp"
-        android:layout_height="35dp"
+        android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:ellipsize="end"
         android:gravity="start|center_vertical"
         android:lines="1"
-        android:text="User"
+        android:text="Task"
         android:textColor="@color/colorPrimary"
         android:textSize="@dimen/text_size_primary"
         android:textStyle="bold"
@@ -44,6 +44,19 @@
         app:layout_constraintStart_toEndOf="@+id/task_picture"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/remove_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/task_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_remove_circle_outline_red_24dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
