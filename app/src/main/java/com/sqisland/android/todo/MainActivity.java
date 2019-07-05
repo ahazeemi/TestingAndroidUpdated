@@ -1,4 +1,4 @@
-package com.sqisland.android.hello;
+package com.sqisland.android.todo;
 
 import android.app.Activity;
 import android.content.Context;
