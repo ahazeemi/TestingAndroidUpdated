@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TODOS</string>
+    <string name="app_name">TO DOs</string>
     <string name="title_activity_task_detail">TaskDetailActivity</string>
     <string name="action_settings">Settings</string>
 

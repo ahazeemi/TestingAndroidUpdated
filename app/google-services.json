@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:898257170195:android:dadab86cefd860f7",
+        "mobilesdk_app_id": "1:898257170195:android:462cbe79a645fe69",
         "android_client_info": {
-          "package_name": "com.sqisland.android.hello"
+          "package_name": "com.sqisland.android.todo"
         }
       },
       "oauth_client": [
